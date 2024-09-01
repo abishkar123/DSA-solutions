@@ -1,13 +1,19 @@
 function twoSum(nums, target) {
-    const numToIndex = new Map();
+    const hashmap = {}; // value: index
+    
     for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        if (numToIndex.has(complement)) {
-            return [numToIndex.get(complement), i];
+        let n = nums[i];
+        let diff = target - n;
+
+        if (hashmap.hasOwnProperty(diff)) {
+            return [hashmap[diff], i];
         }
-        numToIndex.set(nums[i], i);
+        
+        hashmap[n] = i;
     }
+    
     return [];
 }
+
 
 
