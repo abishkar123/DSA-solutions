@@ -3,23 +3,21 @@
  * @return {number[]}
  */
 var sortedSquares = function(nums) {
-    const n = nums.length;
-    let l = 0, r = n - 1;
-    let res = new Array(n);
-
-    // Use a pointer to fill the result array from the end
-    let index = n - 1;
-
+    let l = 0, r = nums.length - 1;
+    let res = new Array(nums.length);
+    let index = nums.length - 1;
+  
     while (l <= r) {
-        if (Math.abs(nums[l]) > Math.abs(nums[r])) {
-            res[index] = nums[l] * nums[l];
-            l++;
-        } else {
-            res[index] = nums[r] * nums[r];
-            r--;
-        }
-        index--;
+      if (nums[l] * nums[l] > nums[r] * nums[r]) {
+        res[index--] = nums[l] * nums[l];
+        l++;
+      } else {
+        res[index--] = nums[r] * nums[r];
+        r--;
+      }
     }
-
+  
     return res;
-};
+  };
+  
+  
