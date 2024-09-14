@@ -1,17 +1,25 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
 var sortedSquares = function(nums) {
-    let left = 0, right = nums.length - 1;
-    let result = new Array(nums.length);
-    let index = nums.length - 1;
+    const n = nums.length;
+    let l = 0, r = n - 1;
+    let res = new Array(n);
 
-    while (left <= right) {
-        if (Math.abs(nums[left]) > Math.abs(nums[right])) {
-            result[index--] = nums[left] * nums[left];
-            left++;
+    // Use a pointer to fill the result array from the end
+    let index = n - 1;
+
+    while (l <= r) {
+        if (Math.abs(nums[l]) > Math.abs(nums[r])) {
+            res[index] = nums[l] * nums[l];
+            l++;
         } else {
-            result[index--] = nums[right] * nums[right];
-            right--;
+            res[index] = nums[r] * nums[r];
+            r--;
         }
+        index--;
     }
 
-    return result;
+    return res;
 };
