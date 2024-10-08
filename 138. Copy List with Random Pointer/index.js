@@ -1,14 +1,11 @@
-/**
- * @param {Node} head
- * @return {Node}
- */
+
 var copyRandomList = function(head) {
     if (!head) return null;
 
     const oldToNew = new Map();
     let curr = head;
 
-    // First pass: create all nodes and put them in the map
+    
     while (curr) {
         oldToNew.set(curr, new Node(curr.val));
         curr = curr.next;
@@ -26,11 +23,3 @@ var copyRandomList = function(head) {
     return oldToNew.get(head);
 };
 
-/**
- * Definition for a Node.
- * function Node(val, next, random) {
- *     this.val = val;
- *     this.next = next;
- *     this.random = random;
- * }
- */
