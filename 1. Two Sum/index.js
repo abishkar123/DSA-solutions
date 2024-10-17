@@ -1,5 +1,5 @@
 function twoSum(nums, target) {
-    const hashmap = {}; // value: index
+    const hashmap = {}; 
     
     for (let i = 0; i < nums.length; i++) {
         let n = nums[i];
@@ -14,6 +14,10 @@ function twoSum(nums, target) {
     
     return [];
 }
+
+// time- 0(n)
+//space - 0(n)
+// hashmap apporach 
 
 
 
