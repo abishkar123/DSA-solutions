@@ -1,8 +1,4 @@
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
+
 function findKthLargest(nums, k) {
     k = nums.length - k;
   
