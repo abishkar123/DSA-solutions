@@ -15,3 +15,7 @@ var characterReplacement = function(s, k) {
 
     return longest;
 };
+
+// time complexity: 0(n)
+//space complexity: 0(1)
+
