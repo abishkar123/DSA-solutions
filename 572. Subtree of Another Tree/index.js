@@ -14,3 +14,5 @@ var isSubtree = function(root, subRoot) {
     
     return hasSubtree(root, subRoot);
 };
+// time complexity is 0(n*m)
+// space complexity is 0(n)
