@@ -21,3 +21,6 @@ var levelOrder = function(root) {
 
     return ans;
 };
+
+// time complexity: 0(n)
+//space complexity: 0(1)
