@@ -32,3 +32,6 @@ var getMinimumDifference = function(root) {
     return minDifference
     
 };
+
+// time complexity is 0(n)
+// space complexity is (n)
