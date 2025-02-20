@@ -25,3 +25,6 @@ function isAnagram (s, t) {
     }
    return true       
 }
+
+
+// time compexity is 0(n) and space compexity is 0(1)

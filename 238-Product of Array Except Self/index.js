@@ -25,3 +25,5 @@ var productExceptSelf = function(nums) {
 
     
 };
+// time complexity is 0(n)
+// space complexity is 0(1)
